@@ -1,0 +1,83 @@
+html,body { 
+font-family: 'Montserrat', sans-serif !important;
+}
+body{
+	
+	  height: 100%;
+        margin: 0px;
+        padding: 0px
+}
+.frontLogo{
+
+position: relative;
+}
+
+.subtn{
+background-color: #404040 ;
+border: 1px solid #404040 ;
+border-radius: 25px;
+padding: 1% 22%;
+color: #fff;
+}
+
+.center{
+text-align:center;
+}
+
+.subtn:hover{
+	background-color: #404040 ;
+border: 1px solid #404040 ;
+}
+
+.change
+{
+color:#404040;
+}
+
+.borderShade
+{
+border-radius:10px;
+padding:10px;
+}
+label
+{
+color:#777571;
+}
+
+#nameLog
+{
+	top: 10px;
+position: relative;
+font-weight: 700;
+color: #fff;
+font-size: 29px;
+}
+
+#greenDof
+{
+color:#176C25;
+}
+   #map-canvas {
+        height: 300px;
+		width:100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  
+	  #searchLocation
+	  {
+		width:300px;
+		padding:5px;
+		font-size:14px;
+	  }
+	  
+	  .pac-container
+	  {
+		width:50% !important;
+	  }
+	  
+	  .tab tr:first-child th {
+	  text-align:center;
+	  background:#5A5858;
+	  color:#fff;
+	  }
