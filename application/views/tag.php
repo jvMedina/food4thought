@@ -11,8 +11,8 @@
 						streetViewControl: false,
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 					
-						zoom:3,
-						center: new google.maps.LatLng(14.55601442101137,121.02357745170593),
+						zoom:2,
+						center: new google.maps.LatLng(0,0),
 				  };
 				  
 				  map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);

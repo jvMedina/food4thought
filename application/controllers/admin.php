@@ -114,7 +114,7 @@ class Admin extends CI_Controller {
 								$this->email->initialize($config);
 								$this->email->set_newline("\r\n");
 								
-								$msg =$pass;
+								$msg ="Thank you for using this app. Here is your password (".$pass.")";
 								
 								$this->email->from('noreply@test.com', 'Successfully Registered - food4thought'); 
 								$this->email->to($email);
@@ -127,10 +127,10 @@ class Admin extends CI_Controller {
 						}else
 						{
 								$this->session->set_flashdata('message', 'User Already Exists.');
-								redirect('/admin/user', 'refresh');
+								redirect('/admin/user/created', 'refresh');
 						}
 					}
-				
+					$data['list'] = $this->admins->userList();
 					$this->load->view('header',$data);
 					$this->load->view('user');
 					$this->load->view('footer');
@@ -151,10 +151,17 @@ class Admin extends CI_Controller {
 			
 			public function deleteClie($id)
 			{
-			$this->admins->deleteClient($id);
+				$this->admins->deleteClient($id);
 				$this->session->set_flashdata('message', 'Successfully deleted');
 				redirect('/admin/client', 'refresh');
 			
+			}
+			
+			public function deleteUser($id)
+			{
+					$this->admins->deleteU($id);
+					$this->session->set_flashdata('message', 'Successfully deleted');
+					redirect('/admin/user', 'refresh');
 			}
 }
 ?>

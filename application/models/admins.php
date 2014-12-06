@@ -84,5 +84,23 @@ class Admins extends CI_Model {
 	{
 		$this->db->where(array('id'=>$id))->update($this->client,array('status'=>1));
 	}
+	
+	public function userList()
+	{
+		$q = $this->db->query('
+			select u.id,u.role,u.username,ut.roleType,u.active from users as u 
+			left join userType as ut ON (u.role  = ut.id) where u.active = 1
+		');
+		if($q->num_rows()>0)
+		{
+			return $q->result();
+		}
+		return false;
+	}
+	
+	public function deleteU($id)
+	{
+		$this->db->where(array('id'=>$id))->update($this->user,array('active'=>2));
+	}
 }
 ?>
